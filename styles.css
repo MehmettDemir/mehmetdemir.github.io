@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Genel stil ayarları */
 body {
     font-family: serif; /* Klasik serif yazı tipi */
@@ -86,3 +87,91 @@ footer {
 }
 
 
+=======
+/* Genel stil ayarları */
+body {
+    font-family: serif; /* Klasik serif yazı tipi */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Arka plan beyaz */
+    color: black; /* Metin rengi siyah */
+    font-size: 18px; /* Tüm içerikler için font boyutu */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: white; /* Header arka planı beyaz */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid #bfbfbf; /* Alt çizgi açık gri */
+    position: relative;
+}
+
+header a {
+    color: black; /* Header içindeki bağlantı metin rengi siyah */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 40px;
+    padding: 10px;
+    position: relative;
+}
+
+header nav ul li.current a {
+    color: black; /* Şu anki sayfa bağlantı metin rengi siyah */
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #666; /* Bağlantı üzerine gelindiğinde koyu gri */
+}
+
+section {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+footer {
+    background: white; /* Footer arka planı beyaz */
+    color: black; /* Footer metin rengi siyah */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+>>>>>>> 5fbe0b46cb48d48454ad27ea87fcaaa4f4f689c9
