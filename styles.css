@@ -56,14 +56,13 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-left: 40px;
+    margin-left: 20px; /* Aralığı 40px'den 20px'ye düşürdüm */
     padding: 10px;
     position: relative;
 }
 
 header nav ul li.current a {
-    color: black; /* Şu anki sayfa bağlantı metin rengi siyah */
-    font-weight: bold;
+    font-weight: bold; /* Renk tanımlaması kaldırıldı, mevcut sayfa zaten siyah olarak kalacak */
 }
 
 header nav ul li a:hover {
