@@ -74,12 +74,70 @@ section {
     text-align: justify;
 }
 
+#contact {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin: 10px 0 5px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Köşeleri hafif yuvarlak yapmak için */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Animasyon eklemek için */
+}
+
+#contact textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Köşeleri hafif yuvarlak yapmak için */
+    transition: background 0.3s;
+}
+
+#contact input[type="submit"]:hover {
+    background: #555;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+    border-color: #666; /* Odaklandığında sınır rengini değiştirin */
+}
+
 footer {
     background: white; /* Footer arka planı beyaz */
     color: black; /* Footer metin rengi siyah */
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative; /* Footer'ı sabit olmaktan çıkarın */
     bottom: 0;
     width: 100%;
 }
