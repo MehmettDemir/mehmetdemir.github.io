@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımda - Mehmet Demir</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Yeni CSS stil ayarları */
+        .certificate button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .certificate button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,11 +45,98 @@
                 Ben Mehmet Demir. İstanbul Rumeli Üniversitesi Bilgisayar Programcılığı bölümünden yeni mezun oldum. Yazılım geliştirme konusunda tutkulu biriyim. HTML, CSS, Python ve JavaScript gibi temel teknolojilere hakimiyetim bulunmaktadır.
                 Bilgisayar İşletmenliği, HTM5 ile Web Geliştirme, İşletim Sistemlerine Giriş, Mobil Güvenlik ve Sızma Teknikleri, Siber Zorbalık Nedir ve Nasıl Önlenir, Temel Bilgisayar ve İnternet Kullanımı gibi konularda da sertifikalarım mevcuttur.
             </p>
+            <h2 style="text-align: center;">Sertifikalarım</h2>
+            <div class="certificates-grid">
+                <div class="certificate">
+                    <button onclick="toggleContent('content1')">Bilgisayar İşletmenliği</button>
+                    <div id="content1" class="certificate-content">
+                        <img src="images/Bilgisayar_İşletmenliği_Sertifikası_page-0001.jpg" alt="Bilgisayar İşletmenliği Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content2')">HTML5 ile Web Geliştirme</button>
+                    <div id="content2" class="certificate-content">
+                        <img src="images/HTML5_ile_Web_Geliştirme_Sertifikası_page-0001.jpg" alt="HTML5 ile Web Geliştirme Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content3')">İşletim Sistemlerine Giriş</button>
+                    <div id="content3" class="certificate-content">
+                        <img src="images/İşletim_Sistemlerine_Giriş_Sertifikası_page-0001.jpg" alt="İşletim Sistemlerine Giriş Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content4')">Mobil Güvenlik ve Sızma Teknikleri</button>
+                    <div id="content4" class="certificate-content">
+                        <img src="images/Mobil_Güvenlik_Ve_Sızma_Teknikleri_Sertifikası_page-0001.jpg" alt="Mobil Güvenlik ve Sızma Teknikleri Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content5')">Siber Zorbalık Nedir ve Nasıl Önlenir?</button>
+                    <div id="content5" class="certificate-content">
+                        <img src="images/Siber_Zorbalık_Sertifikası_page-0001.jpg" alt="Siber Zorbalık Nedir ve Nasıl Önlenir Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content6')">Temel Bilgisayar ve İnternet Kullanımı</button>
+                    <div id="content6" class="certificate-content">
+                        <img src="images/Temel_Bilgisayar_ve_İnternet_Kullanımı_page-0001.jpg" alt="Temel Bilgisayar ve İnternet Kullanımı Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content7')">Web Programlama 101</button>
+                    <div id="content7" class="certificate-content">
+                        <img src="images/Web_Programlama_101_Sertifikası_page-0001.jpg" alt="Web Programlama 101 Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content8')">Web Programlama 201</button>
+                    <div id="content8" class="certificate-content">
+                        <img src="images/Web_Programlama_201_Sertifikası_page-0001.jpg" alt="Web Programlama 201 Sertifikası">
+                    </div>
+                </div>
+                <div class="certificate">
+                    <button onclick="toggleContent('content9')">Web Programlama 301</button>
+                    <div id="content9" class="certificate-content">
+                        <img src="images/Web_Programlama_301_Sertifikası_page-0001.jpg" alt="Web Programlama 301 Sertifikası">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>Mehmet Demir &copy; 2024</p>
     </footer>
+
+    <script>
+        function toggleContent(id) {
+            var element = document.getElementById(id);
+            var button = document.querySelector(`button[data-target="${id}"]`);
+            
+            if (element.style.display === "block") {
+                element.style.display = "none";
+                button.classList.remove('active');
+            } else {
+                // Hide all other certificate contents
+                var allContents = document.querySelectorAll('.certificate-content');
+                allContents.forEach(content => {
+                    if (content.id !== id) {
+                        content.style.display = 'none';
+                    }
+                });
+                // Show the clicked content
+                element.style.display = "block";
+                // Remove 'active' class from all buttons
+                var allButtons = document.querySelectorAll('.certificate button');
+                allButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add 'active' class to the clicked button
+                button.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
+    
